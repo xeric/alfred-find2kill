@@ -15,6 +15,7 @@ fport | fproc
 By default, without provided Port Number, it will show up top 10 items, and with port number, it will find exact process which is using the port.
 
 <img src="https://raw.githubusercontent.com/xeric/alfred-find2kill/master/previews/fport.png">
+In the listed item, type ENTER (or click) to kill process.
 
 ## Command fproc - Search Processes by Process Name
 
