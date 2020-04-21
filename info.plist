@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.xericwei.alfred.port2kill</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>29921DA4-DC04-4DD5-9A35-04657E256256</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>8B765DF6-DE28-4729-A3EC-98842C8E9AE8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>4209ABC5-356B-4B10-9EF1-C20789FF6F9C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FC39EE39-11C4-4C3E-8FFF-BBED39199C23</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>66F46C8B-DE7C-440B-B50E-D73AD858AAF7</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7B7CB011-E703-4C21-AD31-4F7C353F5FA5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>7B7CB011-E703-4C21-AD31-4F7C353F5FA5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E5FA89D6-ACE5-456A-9A4B-6B80FE02B644</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>8B765DF6-DE28-4729-A3EC-98842C8E9AE8</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7B7CB011-E703-4C21-AD31-4F7C353F5FA5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>4209ABC5-356B-4B10-9EF1-C20789FF6F9C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B631A185-3B70-4897-ACA1-7175A8730E82</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>show process command detail</string>
+				<key>vitoclose</key>
+				<true/>
+			</dict>
+		</array>
+		<key>E5FA89D6-ACE5-456A-9A4B-6B80FE02B644</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4DE4F22E-72A8-4D01-AE2F-EF24894D6BE4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>xeric</string>
+	<key>description</key>
+	<string>Find app by occupied port/process info and click to kill</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Find2Kill</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>kill -9 $1 &amp; echo -n $1</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E5FA89D6-ACE5-456A-9A4B-6B80FE02B644</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<true/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Process {query} has been killed</string>
+				<key>title</key>
+				<string>Success!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>4DE4F22E-72A8-4D01-AE2F-EF24894D6BE4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>1</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>fport</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Query ...</string>
+				<key>script</key>
+				<string>query=$1
+
+PATTERN='^[0-9]+$'
+
+IFS=$'\n'
+
+if [[ ! "$query" =~ $PATTERN ]]; then
+	mode="all"
+	lines=($(lsof -iTCP -sTCP:LISTEN,FIN_WAIT_2,FIN_WAIT_1 -n -P | tail -n +2))
+else
+	mode="port"
+	lines=($(lsof -i:$query -sTCP:LISTEN,FIN_WAIT_2,FIN_WAIT_1 | tail -n +2))
+fi
+
+output=$(cat &lt;&lt; EOM
+{"items": [
+EOM
+)
+
+PIDS=()
+
+for (( i=0; i&lt;${#lines[@]}; i++ ))
+do
+	line=${lines[$i]}
+	line=`echo $line | sed "s/'/\\\\\'/g"`
+	PID=`echo ${lines[$i]} | awk '{ print $2 }'`
+
+	if [ $mode == "port" ]; then
+		if printf '%s\n' "${PIDS[@]}" | grep -x -q $PID; then 
+			continue
+		fi
+	fi
+
+	PORT=`echo ${lines[$i]} | awk '{print $9, $10}'`
+	title=`ps -o command -cp $PID | tail -n +2`
+	title=`echo $title | sed "s/'/\\\\\'/g"`
+
+	if [ $mode == "all" ]; then
+		title=`echo $title | grep -i "$query"`
+	fi
+
+	if [ -z "$title" ]; then
+		continue
+	fi
+
+	PORT=`echo $PORT | sed "s/'/\\\\\'/g"`
+	appPath=`ps -o comm= -p $PID`
+	# icon=`expr "$appPath" : '\(.*app\)'`
+	apps=($(echo $appPath | grep -Eo '(.+?\.app)'))
+	if [ -z "$apps" ]; then
+		icon="process.png"
+		iconType=""
+	else
+		iconType="fileicon"
+		icon=$apps
+	fi
+
+	PIDS+=($PID)
+
+	output=$output$(cat &lt;&lt; EOM
+    
+    { 
+        "title": "[${PID}] ${title}",
+        "subtitle": "${PORT}",
+        "arg": "${PID}",
+        "icon": {
+            "type": "${iconType}",
+            "path": "${icon}"
+        }
+    },
+EOM
+)
+done
+
+if [ -z "$PIDS" ]; then
+	if [ $mode == "port" ];
+	then
+		title="No Application Occupies Port ${query}"
+	else
+		title="No Application Found by ${query}"
+	fi
+
+	output=$output$(cat &lt;&lt; EOM
+    
+    { 
+        "title": "${title}",
+        "subtitle": "Change keyword to find again ...",
+        "arg": "",
+        "icon": {
+            "type": "fileicon",
+            "path": ""
+        }
+    },
+EOM
+	)
+fi
+
+output=$output$(cat &lt;&lt; EOM
+
+]}
+EOM
+)
+
+unset IFS
+
+cat &lt;&lt; EOB
+${output}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>filter by port number</string>
+				<key>title</key>
+				<string>find process and occupied port</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>66F46C8B-DE7C-440B-B50E-D73AD858AAF7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<false/>
+				<key>matchmode</key>
+				<integer>2</integer>
+				<key>matchstring</key>
+				<string>\d+</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>7B7CB011-E703-4C21-AD31-4F7C353F5FA5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>1</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>fproc</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>1</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
+				<key>runningsubtext</key>
+				<string>Querying, please wait ...</string>
+				<key>script</key>
+				<string>query=$1
+
+DEFAULT_MAX_PROC=30
+PATTERN_SELF_PRC="/bin/bash .* ${query}$"
+
+IFS=$'\n'
+
+if [ -z "$query" ]; then
+	mode="default_all"
+	query="/Applications"
+elif [ $query == "SHOWALL" ]; then
+	mode="show_all"
+	query=""
+fi
+
+# lines=($(ps aux | sort -nrk 3,3 | awk 'NR &gt;= 2' | grep -i "$query"))
+lines=($(ps aux | sort -nrk 3,3 | sed '$d' | grep -i "$query"))
+
+output=$(cat &lt;&lt; EOM
+{"items": [
+EOM
+)
+
+PIDS=()
+
+totalLine=${#lines[@]}
+
+if [ "$mode" == "default_all" -a "$totalLine" -gt "$DEFAULT_MAX_PROC" ]; then
+	totalLine=$DEFAULT_MAX_PROC
+	showAllItem=`expr ${#lines[@]} - $totalLine`
+fi
+
+for (( i=0; i&lt;${totalLine}; i++ ))
+do
+	line=${lines[$i]}
+	line=`echo $line | sed "s/'/\\\\\'/g"`
+	PID=`echo ${lines[$i]} | awk '{ print $2 }'`
+	process=`echo ${lines[$i]} | grep -o '\(\d\+:\d\+\.\d\+\s\+\)\(.*\)' | sed -e 's/\\"/'\''/g' | sed -e 's/^[0-9]*:[0-9]*.[0-9]* *//g'`
+	if [[ $process =~ $PATTERN_SELF_PRC ]]; then
+		continue
+	fi
+
+	title=`ps -o command -cp $PID | tail -n +2`
+	title=`echo $title | sed "s/'/\\\\\'/g"`
+
+	if [ -z "$title" ]; then
+		continue
+	fi
+
+	appCPU=`echo ${lines[$i]} | awk '{ print $3 }'`
+	appMem=`echo ${lines[$i]} | awk '{ print $4 }'`
+
+	appPath=`ps -o comm= -p $PID`
+
+	apps=($(echo $appPath | grep -Eo '(.+?\.app)'))
+	if [ -z "$apps" ]; then
+		icon="process.png"
+		iconType=""
+	else
+		iconType="fileicon"
+		icon=$apps
+	fi
+
+  	PIDS+=($PID)
+
+	output=$output$(cat &lt;&lt; EOM
+
+    { 
+        "title": "[${PID}] ${title}",
+        "subtitle": "CPU: ${appCPU}% | Mem: ${appMem}% - (Ctrl + click) to get command detials",
+        "arg": "${PID}",
+        "mods": {
+            "ctrl": {
+                "valid": true,
+                "arg": "${process}",
+                "subtitle": "Click to get process command detials"
+            },
+        },
+        "icon": {
+            "type": "${iconType}",
+            "path": "${icon}"
+        }
+    },
+EOM
+)
+done
+
+if [ $showAllItem gt 0 ]; then
+		output=$output$(cat &lt;&lt; EOM
+    
+    { 
+        "title": "Show all other ${showAllItem} processes ... ",
+        "subtitle": "this will take few seconds to execute",
+        "arg": "SHOWALL",
+        "icon": {
+            "type": "fileicon",
+            "path": ""
+        }
+    },
+EOM
+	)
+fi
+
+if [ -z "$PIDS" ]; then
+	escapedQuery=`echo $query | sed -e "s/\\\\\"/'/g" | sed "s/\\\\\\\\/\\\\\\\\\\\\\\\\/g"`
+	title="No Process Found by ${escapedQuery}"
+
+	output=$output$(cat &lt;&lt; EOM
+    
+    { 
+        "title": "${title}",
+        "subtitle": "Change keyword to find again ...",
+        "arg": "",
+        "icon": {
+            "type": "fileicon",
+            "path": ""
+        }
+    },
+EOM
+	)
+fi
+
+output=$output$(cat &lt;&lt; EOM
+
+]}
+EOM
+)
+
+unset IFS
+
+cat &lt;&lt; EOB
+${output}
+EOB</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>filter by keyword</string>
+				<key>title</key>
+				<string>find runing process</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8B765DF6-DE28-4729-A3EC-98842C8E9AE8</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>fprocShowAll</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>29921DA4-DC04-4DD5-9A35-04657E256256</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>fprocShowAll</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>self</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>FC39EE39-11C4-4C3E-8FFF-BBED39199C23</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>SHOWALL</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>4209ABC5-356B-4B10-9EF1-C20789FF6F9C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>largetypetext</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.largetype</string>
+			<key>uid</key>
+			<string>B631A185-3B70-4897-ACA1-7175A8730E82</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>This Port-to-Kill workflow is used for finding process that occupies ports in system and choose item to kill by Pid.
+By default if there's no parameter provided, it will list all processes that occupy ports, then it accepts a parameter:
+1. a port number: find a dedicate process which is using this port
+2. a text keyword, filter listed processes that name contains keyword</string>
+	<key>uidata</key>
+	<dict>
+		<key>29921DA4-DC04-4DD5-9A35-04657E256256</key>
+		<dict>
+			<key>xpos</key>
+			<integer>90</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>4209ABC5-356B-4B10-9EF1-C20789FF6F9C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>370</integer>
+		</dict>
+		<key>4DE4F22E-72A8-4D01-AE2F-EF24894D6BE4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>790</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>66F46C8B-DE7C-440B-B50E-D73AD858AAF7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>7B7CB011-E703-4C21-AD31-4F7C353F5FA5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>490</integer>
+			<key>ypos</key>
+			<integer>240</integer>
+		</dict>
+		<key>8B765DF6-DE28-4729-A3EC-98842C8E9AE8</key>
+		<dict>
+			<key>xpos</key>
+			<integer>260</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>B631A185-3B70-4897-ACA1-7175A8730E82</key>
+		<dict>
+			<key>xpos</key>
+			<integer>480</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
+		<key>E5FA89D6-ACE5-456A-9A4B-6B80FE02B644</key>
+		<dict>
+			<key>xpos</key>
+			<integer>620</integer>
+			<key>ypos</key>
+			<integer>140</integer>
+		</dict>
+		<key>FC39EE39-11C4-4C3E-8FFF-BBED39199C23</key>
+		<dict>
+			<key>xpos</key>
+			<integer>620</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>0.1.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
