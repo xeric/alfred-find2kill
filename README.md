@@ -30,7 +30,7 @@ For example, you search "Google Chrome", you find a process named "Google Chrome
 <img src="https://raw.githubusercontent.com/xeric/alfred-find2kill/master/previews/fproc.png">
 
 In the listed item, type ENTER (or click) to kill process and type CTRL+ENTER (or click) to show process path details.
-<img src="https://raw.githubusercontent.com/xeric/alfred-find2kill/master/previews/fproc-details.png">
+<img src="https://raw.githubusercontent.com/xeric/alfred-find2kill/master/previews/fproc-detail.png">
 
 ## Download built version here:
 
