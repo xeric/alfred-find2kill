@@ -10,7 +10,7 @@ fport | fproc
 
 ## Command fport - Search Processes by Port Number
 
-    fport {PortNumber}
+    fport {Port Number}
 <h>
 By default, without provided Port Number, it will show up top 10 items, and with port number, it will find exact process which is using the port.
 
