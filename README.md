@@ -1,7 +1,7 @@
 # alfred-find2kill
 ***Alfred Quick Process Killer***
 
-An Alfred Workflow provides ability to search and kill process by Port and Process Name
+An Alfred Workflow provides ability to search and kill process by Port Occupation and Process Name
 (This is a shell based workflow, so nothing is required to pre-install)
 
 ```
